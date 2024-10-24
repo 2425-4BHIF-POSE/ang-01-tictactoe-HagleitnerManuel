@@ -1,0 +1,64 @@
+$cell-size: 100px;
+$grid-gap: 10px;
+$primary-color: #1f618d  ;
+$hover-color:  #117a65  ;
+
+.game-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-family: Arial, sans-serif;
+
+  h1 {
+    margin-bottom: 20px;
+  }
+
+  .status {
+    margin-bottom: 10px;
+
+    p {
+      font-size: 1.2rem;
+      margin: 0;
+    }
+  }
+
+  .board {
+    display: grid;
+    grid-template-columns: repeat(3, $cell-size);
+    grid-template-rows: repeat(3, $cell-size);
+    gap: $grid-gap;
+    margin: 20px 0;
+
+    .cell {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background-color: $primary-color;
+      font-size: 2rem;
+      width: $cell-size;
+      height: $cell-size;
+      cursor: pointer;
+      border: 0.2rem solid #ccc;
+      text-align: center;
+
+      &:hover {
+        background-color: $hover-color;
+      }
+    }
+  }
+
+  button {
+    padding: 10px 20px;
+    font-size: 1rem;
+    cursor: pointer;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+
+    &:hover {
+      background-color:   #2e4053  ;
+    }
+  }
+}
